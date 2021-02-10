@@ -354,7 +354,7 @@ class GraphWin(tk.Canvas):
         key = self.lastKey
         self.lastKey = ""
         return key
-            
+
     def getHeight(self):
         """Return the height of the window"""
         return self.height
