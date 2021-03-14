@@ -28,24 +28,20 @@ def loop_to_sentinel(names_arr):
         print('You passed in a list without any names or did not provide the sentinel (End)!')
 
 # PART 2
-def name_reader(path):
-    """ Reads and prints the names in the text file.
-
-    Argument:
-    path : STRING, path to your text file
-    """
+def name_reader():
+    """ Reads and prints the names from mynames.txt file """
     try:
-        with open(path, 'r') as reader:
+        with open("mynames.txt", "r") as reader:
             line = reader.readline()
             while line != '':  # Empty string signifies end of document
                 print(line, end='')
                 line = reader.readline()
     except FileNotFoundError:
-        print("You need to pass in the path to your text file.")
+        print("You need to make a 'mynames.txt' file. ")
 
 
 if __name__ == '__main__' :
     loop_to_sentinel(NAMES)
-    loop_to_sentinel(NAMES2)
-    loop_to_sentinel(NAMES_NO_SENTINEL)
-    name_reader("") #use path to your text file, as a string, as the argument
+    # loop_to_sentinel(NAMES2)
+    # loop_to_sentinel(NAMES_NO_SENTINEL)
+    name_reader()
